@@ -1,0 +1,21 @@
+{
+  "name": "LoadMatch",
+  "short_name": "LoadMatch",
+  "description": "Match empty returning trucks with shippers needing the reverse route.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B3B2E",
+  "theme_color": "#0B3B2E",
+  "icons": [
+    {
+      "src": "assets/img/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

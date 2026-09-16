@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketplace — LoadMatch | Empty Trucks & Backhaul Loads</title>
+<meta name="description" content="Browse verified trucks returning empty and post loads needing transport. Real-time matching across Accra, Kumasi, Tema, Takoradi and Tamale.">
+<link rel="canonical" href="https://empty-trackload.onrender.com/marketplace.html">
+<meta name="theme-color" content="#0B3B2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LoadMatch">
+<meta property="og:title" content="Marketplace — LoadMatch | Empty Trucks & Backhaul Loads">
+<meta property="og:description" content="Browse verified trucks returning empty and post loads needing transport. Real-time matching across Accra, Kumasi, Tema, Takoradi and Tamale.">
+<meta property="og:image" content="https://empty-trackload.onrender.com/assets/img/og-image.png">
+<meta property="og:url" content="https://empty-trackload.onrender.com/marketplace.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketplace — LoadMatch | Empty Trucks & Backhaul Loads">
+<meta name="twitter:description" content="Browse verified trucks returning empty and post loads needing transport. Real-time matching across Accra, Kumasi, Tema, Takoradi and Tamale.">
+<meta name="twitter:image" content="https://empty-trackload.onrender.com/assets/img/og-image.png">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="LoadMatch home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#0B3B2E"/><path d="M6 20h12l4-6h4v6h-2" fill="none" stroke="#7FD6B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="22" r="2.4" fill="#FDE68A"/><circle cx="22" cy="22" r="2.4" fill="#FDE68A"/></svg>
+      LoadMatch
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="post-truck.html">List an Empty Truck</a></li>
+      <li><a href="post-load.html">Post a Load</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a class="btn btn-primary btn-sm" href="post-load.html">Get Started</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<section class="section">
+  <div class="container">
+    <h1 style="color:var(--green-900)">Marketplace</h1>
+    <p class="sub">Trucks returning empty on the left, loads needing a ride on the right. Hit “Run matching” to see the engine pair them.</p>
+    <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-primary" id="run-match">Run matching</button>
+      <span class="consent-note">Matching engine pairs empty legs with reverse-route loads in real time.</span>
+    </div>
+    <div id="match-banner" class="match-banner" role="status"></div>
+    <div class="card mp-filter" role="search" aria-label="Filter marketplace listings">
+      <div class="mp-search-wrap">
+        <label for="mp-search">Search</label>
+        <input type="search" id="mp-search" placeholder="Route, truck type, cargo, plate…" autocomplete="off">
+      </div>
+      <div>
+        <label for="mp-city">Origin city</label>
+        <select id="mp-city"><option value="">All cities</option></select>
+      </div>
+      <div>
+        <label for="mp-sort">Sort by</label>
+        <select id="mp-sort">
+          <option value="new">Newest first</option>
+          <option value="price-asc">Price: low → high</option>
+          <option value="price-desc">Price: high → low</option>
+        </select>
+      </div>
+      <div>
+        <button class="btn btn-ghost btn-sm" id="mp-reset" type="button">Reset</button>
+      </div>
+    </div>
+    <div class="mp-columns" style="margin-top:1.4rem">
+      <div class="mp-col">
+        <h2>Trucks returning empty</h2>
+        <div class="grid" id="truck-list"></div>
+        <p style="margin-top:1rem"><a class="btn btn-ghost" href="post-truck.html">+ List your empty truck</a></p>
+      </div>
+      <div class="mp-col">
+        <h2>Loads needing a truck</h2>
+        <div class="grid" id="load-list"></div>
+        <p style="margin-top:1rem"><a class="btn btn-ghost" href="post-load.html">+ Post a load</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>LoadMatch</h4>
+        <p style="font-size:.9rem;max-width:38ch">The empty-truck marketplace. We match trucks returning empty with shippers who need the reverse route — verified carriers, GPS tracking, escrow payments.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="post-truck.html">List an Empty Truck</a>
+        <a href="post-load.html">Post a Load</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="404.html">Page Not Found (demo)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span data-year></span> LoadMatch Ltd. All rights reserved. · Accra, Ghana</div>
+  </div>
+</footer>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="container cookie-inner">
+    <p>We use cookies to run the marketplace, remember your preferences, and measure traffic (see our <a href="privacy.html" style="color:#7FD6B6">Privacy Policy</a>). Analytics only load after you accept.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary btn-sm" data-consent="accepted">Accept cookies</button>
+      <button class="btn btn-ghost btn-sm" data-consent="declined" style="color:#fff;border-color:#7FD6B6">Decline</button>
+    </div>
+  </div>
+</div>
+<script>window.LOADMATCH_API_BASE = 'https://trackloadadmin.onrender.com';</script>
+<script src="assets/js/api-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pages.js"></script>
+<script src="assets/js/chatbot.js"></script>
+</body>
+</html>

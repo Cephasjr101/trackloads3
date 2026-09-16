@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — LoadMatch | Track, Contract, Pay</title>
+<meta name="description" content="Manage matched backhauls: live GPS tracking, digital contracts, escrow payments and OTP proof of delivery.">
+<link rel="canonical" href="https://empty-trackload.onrender.com/dashboard.html">
+<meta name="theme-color" content="#0B3B2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LoadMatch">
+<meta property="og:title" content="Dashboard — LoadMatch | Track, Contract, Pay">
+<meta property="og:description" content="Manage matched backhauls: live GPS tracking, digital contracts, escrow payments and OTP proof of delivery.">
+<meta property="og:image" content="https://empty-trackload.onrender.com/assets/img/og-image.png">
+<meta property="og:url" content="https://empty-trackload.onrender.com/dashboard.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dashboard — LoadMatch | Track, Contract, Pay">
+<meta name="twitter:description" content="Manage matched backhauls: live GPS tracking, digital contracts, escrow payments and OTP proof of delivery.">
+<meta name="twitter:image" content="https://empty-trackload.onrender.com/assets/img/og-image.png">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="LoadMatch home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#0B3B2E"/><path d="M6 20h12l4-6h4v6h-2" fill="none" stroke="#7FD6B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="22" r="2.4" fill="#FDE68A"/><circle cx="22" cy="22" r="2.4" fill="#FDE68A"/></svg>
+      LoadMatch
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="post-truck.html">List an Empty Truck</a></li>
+      <li><a href="post-load.html">Post a Load</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a class="btn btn-primary btn-sm" href="post-load.html">Get Started</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<section class="section" id="dashboard">
+  <div class="container">
+    <h1 style="color:var(--green-900);margin-bottom:0">Operations Dashboard</h1>
+    <p class="sub">Matches, live tracking, contracts, escrow payments and proof of delivery — all in one place, live from the backend.</p>
+    <div class="kpi-row">
+      <div class="kpi"><span class="kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#116B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 8h13v8H1zM14 11h4l3 3v2h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><strong id="kpi-trucks">0</strong><span>Trucks on platform</span></div>
+      <div class="kpi"><span class="kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#116B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3.3 8.3L12 13l8.7-4.7M12 13v8"/></svg></span><strong id="kpi-loads">0</strong><span>Open loads</span></div>
+      <div class="kpi"><span class="kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#116B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><strong id="kpi-matches">0</strong><span>Your matches</span></div>
+      <div class="kpi"><span class="kpi-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#116B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><strong id="kpi-revenue">GH₵ 0</strong><span>Commission across your matches</span></div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Dashboard sections">
+      <button class="tab" role="tab" data-tab="matches" aria-selected="true">Matches</button>
+      <button class="tab" role="tab" data-tab="tracking" aria-selected="false">GPS Tracking</button>
+      <button class="tab" role="tab" data-tab="contract" aria-selected="false">Digital Contract</button>
+      <button class="tab" role="tab" data-tab="payment" aria-selected="false">Payment &amp; Commission</button>
+      <button class="tab" role="tab" data-tab="pod" aria-selected="false">Proof of Delivery</button>
+    </div>
+    <div class="panel active" id="panel-matches" role="tabpanel">
+      <div class="table-wrap"><table>
+        <thead><tr><th>Match</th><th>Carrier (empty leg)</th><th>Shipper (load)</th><th>Price</th><th>Comm.</th><th>Status</th><th></th></tr></thead>
+        <tbody id="matches-body"></tbody>
+      </table></div>
+      <p class="consent-note">Matching logic: exact reverse route scores highest, same-direction lower; capacity/volume must fit; date windows must overlap; budget-vs-estimate and verification badges adjust the score.</p>
+    </div>
+    <div class="panel" id="panel-tracking" role="tabpanel"><div id="tracking-body"></div></div>
+    <div class="panel" id="panel-contract" role="tabpanel"><div id="contract-body"></div></div>
+    <div class="panel" id="panel-payment" role="tabpanel"><div id="payment-body"></div></div>
+    <div class="panel" id="panel-pod" role="tabpanel"><div id="pod-body"></div></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>LoadMatch</h4>
+        <p style="font-size:.9rem;max-width:38ch">The empty-truck marketplace. We match trucks returning empty with shippers who need the reverse route — verified carriers, GPS tracking, escrow payments.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="post-truck.html">List an Empty Truck</a>
+        <a href="post-load.html">Post a Load</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="404.html">Page Not Found (demo)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span data-year></span> LoadMatch Ltd. All rights reserved. · Accra, Ghana</div>
+  </div>
+</footer>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="container cookie-inner">
+    <p>We use cookies to run the marketplace, remember your preferences, and measure traffic (see our <a href="privacy.html" style="color:#7FD6B6">Privacy Policy</a>). Analytics only load after you accept.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary btn-sm" data-consent="accepted">Accept cookies</button>
+      <button class="btn btn-ghost btn-sm" data-consent="declined" style="color:#fff;border-color:#7FD6B6">Decline</button>
+    </div>
+  </div>
+</div>
+<script>window.LOADMATCH_API_BASE = 'https://trackloadadmin.onrender.com';</script>
+<script src="assets/js/api-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pages.js"></script>
+<script src="assets/js/chatbot.js"></script>
+</body>
+</html>
